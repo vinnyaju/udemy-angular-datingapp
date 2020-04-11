@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "${workspaceFolder}\\Data/datingapp.db",
+            "dialect": "SQLite",
+            "name": "DefaultConnection - DEV"
+        }
+    ]
+}
