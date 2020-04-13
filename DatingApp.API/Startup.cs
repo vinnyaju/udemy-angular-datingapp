@@ -41,7 +41,7 @@ namespace DatingApp.API
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters{
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey( Encoding.UTF8.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
                         ValidateIssuer = false,
                         ValidateAudience = false
                     };
@@ -66,7 +66,7 @@ namespace DatingApp.API
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthentication();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
